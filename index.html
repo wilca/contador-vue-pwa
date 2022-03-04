@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- metadata para pwa -->
+    <!-- modificar barra de estado android -->
+    <meta name="theme-color" content="#41b883">
+    <!-- optimizaciones de seo -->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandhelpFriendly" content="true">
+    <!-- modificar barra de estado ios -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Contador</title>
+
+    <!-- iconos -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/favicon.png">
+    <link rel="apple-touch-startup-image" href="./img/favicon.png">
+
+    <!-- manifiesto -->
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1>
+        <hr>
+        <h3 class="count">{{count}}</h3>
+        <hr>
+        <div class="buttons">
+            <button v-on:click="modCount('res', 1)">- 1</button>
+            <button @click="modCount('', 1)">+ 1</button>
+        </div>
+    </div>
+
+    <script src="load.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>
